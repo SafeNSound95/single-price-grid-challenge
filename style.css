@@ -1,0 +1,186 @@
+/* DESIGN DECISIONS */
+
+/* 
+
+  Colors: 
+    ### Primary
+    - Cyan: hsl(179, 62%, 43%) hsl(183, 55%, 57%)
+    - Bright Yellow: hsl(71, 73%, 54%)
+
+    ### Neutral
+    - Light Gray: hsl(204, 43%, 93%) hsl(204, 43%, 90%) hsl(204, 43%, 83%)
+    - Grayish Blue: hsl(218, 22%, 67%)
+
+  Fonts:
+    - Family: [Karla](https://fonts.google.com/specimen/Karla)
+      Weights: 400, 700
+
+*/
+
+/* GENERAL STYLES */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 1.6rem;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: hsl(204, 43%, 93%);
+}
+
+/* SPECIFIC STYLES */
+
+.price-container {
+  max-width: 75rem;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "footer1 footer2";
+  border-radius: 1rem;
+  overflow: hidden;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.join-us-section,
+.price-section,
+.features-section {
+  padding: 5rem;
+}
+
+.join-us-section {
+  grid-area: header;
+  background-color: hsl(0, 100%, 100%);
+}
+
+.price-section {
+  grid-area: footer1;
+  background-color: hsl(179, 62%, 43%);
+}
+
+.features-section {
+  grid-area: footer2;
+  background-color: hsl(183, 55%, 57%);
+}
+
+.primary-heading,
+.secondary-heading {
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
+.primary-heading {
+  font-size: 2.7rem;
+  color: hsl(179, 62%, 43%);
+}
+
+.secondary-heading {
+  font-size: 2.1rem;
+  color: hsl(0, 100%, 100%);
+}
+
+.--join-us-heading {
+  margin-bottom: 1.5rem;
+  color: hsl(71, 73%, 54%);
+}
+
+.price-text,
+.join-us-text,
+.price-paragraph {
+  font-size: 1.8rem;
+}
+
+.join-us-text {
+  color: hsl(218, 22%, 67%);
+  line-height: 1.6;
+}
+
+.price-paragraph {
+  color: hsl(204, 43%, 83%);
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.4rem;
+}
+
+.price,
+.price-text {
+  color: hsl(0, 100%, 100%);
+}
+
+.price {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.price-text {
+  margin-bottom: 3.5rem;
+}
+
+.cta-link:link,
+.cta-link:visited {
+  display: block;
+  min-width: 27rem;
+  border-radius: 0.6rem;
+  padding: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: none;
+  color: hsl(0, 100%, 100%);
+  font-weight: 700;
+  background-color: hsl(71, 73%, 54%);
+}
+
+.cta-link:hover,
+.cta-link:active {
+  background-color: hsl(71, 73%, 48%);
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+  color: hsl(204, 43%, 90%);
+}
+
+/*MEDIA QUERIES*/
+
+/*800px*/
+@media (max-width: 50em) {
+  .price-container {
+    max-width: 36rem;
+    margin: 5rem 0;
+    grid-template-areas:
+      "header"
+      "footer1"
+      "footer2";
+    grid-template-columns: 1fr;
+  }
+
+  .join-us-section,
+  .price-section,
+  .features-section {
+    padding: 3.5rem;
+  }
+
+  .--join-us-heading {
+    margin-bottom: 2.5rem;
+  }
+
+  .cta-link {
+    padding: 2rem;
+  }
+}
