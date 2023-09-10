@@ -23,8 +23,8 @@ This is my third challenge on the frontend mentor website, the task is to build 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/single-price-grid-component-grid-HQnV3RvIUB]
+- Live Site URL: [https://price-grid-saif.netlify.app/]
 
 ## My process
 
